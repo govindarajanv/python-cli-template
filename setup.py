@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name='dcp',
+    name='greet',
     version=1.0,
-    packages=['dcp'],
+    packages=['greet'],
     install_requires=['click', 'pytest'],
-    entry_points={'console_scripts': ['dcp = dcp.cli:cli']}
+    entry_points={'console_scripts': ['greet = greet.cli:cli']}
 )
