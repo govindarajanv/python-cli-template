@@ -1,7 +1,7 @@
 # python-cli-template
 
 # Usage
-
-python -m greet.cli
+$ pip install -r requirements.txt
+$ python -m greet.cli
 
 
