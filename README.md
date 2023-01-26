@@ -1,2 +1,7 @@
 # python-cli-template
-python-cli-template
+
+# Usage
+
+python -m greet.cli
+
+
