@@ -1,0 +1,6 @@
+repos:
+# Linting
+- repo: https://github.com/pycqa/flake8
+  rev: 3.9.2 # can also add a git hash or tag
+  hooks:
+  - id: flake8
