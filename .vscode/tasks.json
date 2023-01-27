@@ -1,18 +1,40 @@
 // Python linting with pylint
+
+
+// tasks.json
 {
-	"version": "0.1.0",
-	"command": "pylint",
-	"isShellCommand": true,
-	"args": ["--output-format=parseable","${file}"],
-	"showOutput": "silent",
-	"problemMatcher": {
-		"fileLocation": ["relative", "${workspaceRoot}"],
-		"pattern": {
-			"regexp": "(.+):(\\d+): (.+)",
-			"file": 1,
-			"line": 2,
-			"code": 3,
-			"message": 3
-		}
-	}
-}
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "flake8-whole-project",
+        "type": "shell",
+        "command": "flake8 .",
+        "presentation": {
+          "echo": true,
+          "reveal": "never",
+          "focus": false,
+          "panel": "shared",
+          "showReuseMessage": false,
+          "clear": true,
+          "revealProblems": "never"
+        },
+
+        "problemMatcher": {
+          "owner": "flake8",
+          "source": "flake8-whole-project",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": {
+            "regexp": "^(.+):(\\d+):(\\d+): ((\\w+)\\d+) (.+)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "code": 4,
+            "severity": 5,
+            "message": 6
+          }
+        }
+      }
+    ]
+  }
